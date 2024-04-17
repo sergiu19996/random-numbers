@@ -45,8 +45,8 @@ def go_back():
         print("\nBack Menu:")
         for index, option in enumerate(options):
             print(f"{index + 1}. {option}")
-        choice = input("Please choose an option: ")
-        if choice == "1":
+        choice_goback = input("Please choose an option: ")
+        if choice_goback == "1":
             main_menu()
         else:
             print("Invalid choice. Please choose again.")
