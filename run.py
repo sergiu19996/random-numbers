@@ -1,5 +1,5 @@
 import random
-from simple_term_menu import TerminalMenu
+
 
 def main_menu():
     """
@@ -13,7 +13,7 @@ def main_menu():
         choice = input("Please choose an option: ")
         if choice == "1":
             print_rules()
-            go_back()  # Ne întoarcem la meniul principal după ce am afișat regulile
+            go_back()
         elif choice == "2":
             print("GAME")
             guess()
@@ -24,6 +24,7 @@ def main_menu():
         else:
             print("Invalid choice. Please choose again.")
 
+
 def print_rules():
     """
     Print out the rules of the game.
@@ -31,9 +32,9 @@ def print_rules():
     print("\nGame Rules:")
     print("1. Guess a number between 1 and 20.")
     print("2. You have unlimited tries to guess the correct number.")
-    print("3. After each guess, you will receive a hint whether your guess is too high or too low.")
-    print("4. Keep guessing until you find the correct number.")
-    print("5. Have fun and good luck!")
+    print("3. Keep guessing until you find the correct number.")
+    print("4. Have fun and good luck!")
+
 
 def go_back():
     """
@@ -46,9 +47,10 @@ def go_back():
             print(f"{index + 1}. {option}")
         choice = input("Please choose an option: ")
         if choice == "1":
-            main_menu()  # Ne întoarcem la meniul principal după ce am citit regulile
+            main_menu()
         else:
             print("Invalid choice. Please choose again.")
+
 
 def guess():
     """
@@ -71,12 +73,14 @@ def guess():
             print('Yay, you guessed it!')
             break
 
+
 def main():
     """
     Start the game by displaying a welcome message and showing the main menu.
     """
     print("Hey!")
     main_menu()
+
 
 if __name__ == "__main__":
     main()
