@@ -5,12 +5,14 @@ def main_menu():
     """
     Display the main menu and handle user selection.
     """
-    options = ["learn the rules", "play the game", "exit"]
+    options = ["1 learn the rules", "2 play the game", "3 exit"]
     while True:
         print("\nMain Menu:")
         for index, option in enumerate(options):
             print(f"{index + 1}. {option}")
+        print('before input')
         choice = input("Please choose an option: ")
+        print('after input')
         if choice == "1":
             print_rules()
             go_back()
